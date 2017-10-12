@@ -14,3 +14,22 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('index',[
+  'as'=>'trangchu',
+  'uses'=>'PageController@getIndex'
+]);
+Route::get('loai_sanpham/{type}',['as'=>'loai_sanpham',
+'uses'=>'PageController@getLoaiSanPham']);
+
+Route::get('chitietsanpham/{id}',['as'=>'chitietsanpham'
+,'uses'=>'PageController@getChiTietSanPham']);
+
+Route::get('lienhe',[
+  'as'=>'lienhe',
+  'uses'=>'PageController@getLienHe'
+]);
+
+Route::get('gioithieu',[
+  'as'=>'gioithieu',
+  'uses'=>'PageController@getGioiThieu'
+]);
